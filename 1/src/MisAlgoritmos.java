@@ -19,8 +19,18 @@ public class MisAlgoritmos implements Busquedas,Ordenamientos{
 
         while (izq <= der){
             int mid =(izq+der)/2;
-            if(arrayPorExplorar[mid==elementoABuscar])[]
+            if(arrayPorExplorar[mid]==elementoABuscar){
+                return mid;
+
+            }
+            if (arrayPorExplorar[mid]< elementoABuscar) {
+                izq= mid + 1;
+            }
+            else{
+                der= mid -1;
+            }
         }
+        return -1;
     }
 
     @Override
